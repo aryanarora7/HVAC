@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Air Quality Monitoring System</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="container">
+    <div class="reading" id="temperature">
+      <img src="temperature-icon.png" alt="Temperature" class="reading-icon">
+      Temperature: <span id="temperature-value"></span> °C
+    </div>
+    <div class="reading" id="humidity">
+      <img src="humidity-icon.png" alt="Humidity" class="reading-icon">
+      Humidity: <span id="humidity-value"></span> %
+    </div>
+    <img src="air-quality-monitor.png" alt="Air Quality Monitor" class="monitor-image">
+    <h1>Air Quality Monitoring System</h1>
+    <div class="reading" id="co2">
+      <img src="co2-icon.png" alt="CO2" class="reading-icon">
+      CO2: <span id="co2-value"></span> ppm
+    </div>
+    <div class="reading" id="co">
+      <img src="co-icon.png" alt="CO" class="reading-icon">
+      CO: <span id="co-value"></span> ppm
+    </div>
+    <div class="reading" id="alco">
+      <img src="alcohol-icon.png" alt="Alcohol" class="reading-icon">
+      Alcohol: <span id="alco-value"></span> ppm
+    </div>
+    <div class="reading" id="nh4">
+      <img src="nh4-icon.png" alt="NH4" class="reading-icon">
+      NH4: <span id="nh4-value"></span> ppm
+    </div>
+    <div class="reading" id="tolu">
+      <img src="toluene-icon.png" alt="Toluene" class="reading-icon">
+      Toluene: <span id="tolu-value"></span> ppm
+    </div>
+    <div class="reading" id="acet">
+      <img src="acetone-icon.png" alt="Acetone" class="reading-icon">
+      Acetone: <span id="acet-value"></span> ppm
+    </div>
+    <div class="button-container">
+      <button onclick="refreshData()" class="refresh-button">Refresh Data</button>
+      <button onclick="showGraph()" class="graph-button">Show Graph</button>
+    </div>
+    <canvas id="sensorChart" width="800" height="400"></canvas>
+  </div>
+
+  <!-- Include Chart.js library from CDN -->
+  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+  <!-- Include your custom script -->
+  <script src="script.js"></script>
+</body>
+</html>
